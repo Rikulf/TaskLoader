@@ -1,0 +1,2 @@
+# default
+Skeleton project setup

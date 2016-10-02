@@ -42,61 +42,9 @@ def load_query_criteria(config_filename):
 
     return system_list
 
-def _test_system_config():
-    filename = 'test_config.txt'
-    f = open(filename, 'w')
-    f.write('JIRA|param1|param2\n')
-    f.write('QTASK|param3|param4\n')
-    f.close()
-    system_list = load_system_config(filename)
-    os.remove(filename)
-    assert (system_list[0].sys_type == 'JIRA')
-    assert (system_list[0].param1 == 'param1')
-    assert (system_list[0].param2 == 'param2')
-    assert (system_list[1].sys_type == 'QTASK')
-    assert (system_list[1].param1 == 'param3')
-    assert (system_list[1].param2 == 'param4')
-
-
-def _test_get_query_criteria():
-    filename = 'test_criteria.txt'
-    f = open(filename, 'w')
-    f.write('JIRA|param1|param2\n')
-    f.write('QTASK|param3|param4\n')
-    f.close()
-    system_list = load_query_criteria(filename)
-    os.remove(filename)
-    assert (system_list[0].sys_type == 'JIRA')
-    assert (system_list[0].param1 == 'param1')
-    assert (system_list[0].param2 == 'param2')
-    assert (system_list[1].sys_type == 'QTASK')
-    assert (system_list[1].param1 == 'param3')
-    assert (system_list[1].param2 == 'param4')
-
-
-def _test_load_tickets():
-    assert (0 == 1)
-    pass
-
-
-def _test_display_tickets():
-    assert (0 == 1)
-    pass
-
-
 ###############################################
 #
-#  MAIN -- Tests only
+#  MAIN
 #
 ###############################################
 
-# Read configs
-# -- Get connection info
-_test_system_config()
-# -- Get query criteria
-_test_get_query_criteria()
-# Loop through systems
-# -- Load tickets meeting criteria
-_test_load_tickets()
-# Display tickets
-_test_display_tickets()

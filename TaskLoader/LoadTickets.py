@@ -42,6 +42,12 @@ def load_query_criteria(config_filename):
 
     return system_list
 
+def load_tickets():
+    pass
+
+def display_tickets():
+    pass
+
 ###############################################
 #
 #  MAIN

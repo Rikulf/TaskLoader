@@ -3,8 +3,8 @@ import unittest
 
 __author__ = 'Darryl Martin'
 
-class FileHandlingTestCase(unittest.TestCase):
 
+class FileHandlingTestCase(unittest.TestCase):
     def test_system_config(self):
         filename = 'test_config.txt'
         f = open(filename, 'w')
@@ -35,6 +35,7 @@ class FileHandlingTestCase(unittest.TestCase):
         self.assertEqual(system_list[1].param1, 'param3')
         self.assertEqual(system_list[1].param2, 'param4')
 
+
 '''
 class TicketInfoTestCase(unittest.TestCase):
 
@@ -50,10 +51,12 @@ class TicketInfoTestCase(unittest.TestCase):
 
 
 def setup():
-    print ("SETUP!")
+    print("SETUP!")
+
 
 def teardown():
-    print ("TEAR DOWN!")
+    print("TEAR DOWN!")
+
 
 if __name__ == '__main__':
     unittest.main()

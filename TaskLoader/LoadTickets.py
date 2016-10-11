@@ -1,15 +1,10 @@
 import work_ticket
-import os
+#import os
 
 __author__ = 'Darryl Martin'
 
 
-def load_system_config(config_filename):
-    """
-
-    :type config_filename: str
-    """
-
+def load_system_config(config_filename: str) -> list:
     system_list = []
 
     # open config file
@@ -23,12 +18,8 @@ def load_system_config(config_filename):
 
     return system_list
 
-def load_query_criteria(config_filename):
-    """
 
-    :type config_filename: str
-    """
-
+def load_query_criteria(config_filename: str) -> list:
     system_list = []
 
     # open config file
@@ -42,15 +33,27 @@ def load_query_criteria(config_filename):
 
     return system_list
 
-def load_tickets():
-    pass
+
+def load_tickets(ticket_system: work_ticket.TicketSystem) -> list:
+
+    return tickets
+
 
 def display_tickets():
     pass
+
 
 ###############################################
 #
 #  MAIN
 #
 ###############################################
+def main():
+    config_file = 'config.txt'
+    criteria_file = 'criteria.txt'
 
+#add error checking
+    load_system_config(config_file)
+    load_query_criteria(criteria_file)
+    load_tickets()
+    display_tickets()

@@ -1,4 +1,4 @@
-import LoadTickets
+import load_tickets
 import work_ticket
 import unittest
 
@@ -7,7 +7,7 @@ __author__ = 'Darryl Martin'
 
 class TicketInfoTestCase(unittest.TestCase):
     def test_load_tickets(self):
-        tickets = LoadTickets.load_tickets(work_ticket.TicketSystem('JIRA', 'param1', 'param2'))
+        tickets = load_tickets.load_tickets(work_ticket.TicketSystem('JIRA', 'param1', 'param2'))
         self.assertEquals(tickets.id, 'PBM-1')
         self.assertEquals(tickets.status, 'Closed')
         self.assertEquals(tickets.assign, 'Darryl')

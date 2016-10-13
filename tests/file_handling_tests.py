@@ -1,4 +1,4 @@
-from LoadTickets import *
+from load_tickets import *
 import unittest
 
 __author__ = 'Darryl Martin'

@@ -1,4 +1,5 @@
-import work_ticket
+import load_tickets
+import loader_types
 
 __author__ = 'Darryl Martin'
 
@@ -12,8 +13,9 @@ def main():
     config_file = 'config.txt'
     criteria_file = 'criteria.txt'
 
-    # add error checking
-    load_system_config(config_file)
-    load_query_criteria(criteria_file)
-    load_tickets()
-    display_tickets()
+#    load_tickets()
+    loader = loader_types.ConnectionsInFiles(config_file, criteria_file)
+    connections = new Connections(loader)
+    tickets = load_tickets(connections)
+
+#    display_tickets()

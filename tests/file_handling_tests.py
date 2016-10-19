@@ -1,4 +1,4 @@
-from load_tickets import *
+import loader_types
 import unittest
 
 __author__ = 'Darryl Martin'
@@ -35,6 +35,8 @@ class FileHandlingTestCase(unittest.TestCase):
         self.assertEqual(system_list[1].param1, 'param3')
         self.assertEqual(system_list[1].param2, 'param4')
 
+
+loader = loader_types.ConnectionsInFiles(config_file, criteria_file)
 
 '''
 class TicketInfoTestCase(unittest.TestCase):

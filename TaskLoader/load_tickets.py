@@ -7,7 +7,7 @@ __author__ = 'Darryl Martin'
 
 
 
-def load_tickets(ticket_system: work_ticket.TicketSystem) -> list:
+def load_tickets(connections: dict) -> list:
 
 
 

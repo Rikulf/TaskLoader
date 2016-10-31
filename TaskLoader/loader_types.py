@@ -32,6 +32,8 @@ class ConnectionsInFiles(ConnectionLoader):
                     ticket_system.set_sys_type(system_ref)
                 elif our_ref == 'url':
                     ticket_system.set_url(system_ref)
+                elif our_ref == 'tkt_id':
+                    ticket_system.set_tkt_id(system_ref)
                 elif our_ref == 'tkt_requester':
                     ticket_system.set_tkt_requester(system_ref)
                 elif our_ref == 'tkt_assigned':

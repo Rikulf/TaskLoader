@@ -15,7 +15,7 @@ def main():
 
 #    load_tickets()
     loader = loader_types.ConnectionsInFiles(config_file, criteria_file)
-    connections = new Connections(loader)
+    connections = loader.load_connections()
     tickets = load_tickets(connections)
 
 #    display_tickets()

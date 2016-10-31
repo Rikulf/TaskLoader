@@ -26,7 +26,7 @@ class FileHandlingTestCase(unittest.TestCase):
         f.write('JIRA|param1|param2\n')
         f.write('QTASK|param3|param4\n')
         f.close()
-        system_list = load_query_criteria(filename)
+        system_list = loader_types._load_query_criteria(filename)
         os.remove(filename)
         self.assertEqual(system_list[0].sys_type, 'JIRA')
         self.assertEqual(system_list[0].param1, 'param1')
@@ -36,7 +36,7 @@ class FileHandlingTestCase(unittest.TestCase):
         self.assertEqual(system_list[1].param2, 'param4')
 
 
-loader = loader_types.ConnectionsInFiles(config_file, criteria_file)
+# loader = loader_types.ConnectionsInFiles(config_file, criteria_file)
 
 '''
 class TicketInfoTestCase(unittest.TestCase):

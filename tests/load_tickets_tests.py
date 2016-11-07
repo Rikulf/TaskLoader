@@ -7,14 +7,17 @@ __author__ = 'Darryl Martin'
 
 class LoadTicketsTestCase(unittest.TestCase):
     def test_load_tickets(self):
+        connections = self._setup()
         tickets = load_tickets.load_tickets(connections)
         self.assertEquals(tickets.id, 'PBM-1')
         self.assertEquals(tickets.status, 'Closed')
         self.assertEquals(tickets.assign, 'Darryl')
+        self._teardown()
 
-    def _setup():
+    def _setup(self) -> dict:
         print("SETUP!")
         # Create JIRA-cS connection
+        pass
         # Create JIRA-vob connection
         connections = {}
         ticket_system = work_ticket.TicketSystem()
@@ -38,7 +41,7 @@ class LoadTicketsTestCase(unittest.TestCase):
         ticket_system.criteria[0] = "status != 'closed' and project = 'PPT'"
         connections['QTASK'] = ticket_system
 
-    def teardown():
+    def _teardown(self):
         print("TEAR DOWN!")
 
 

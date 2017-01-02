@@ -13,7 +13,6 @@ def main():
     config_file = 'config.txt'
     criteria_file = 'criteria.txt'
 
-#    load_tickets()
     loader = loader_types.ConnectionsInFiles(config_file, criteria_file)
     connections = loader.load_connections()
     tickets = load_tickets(connections)

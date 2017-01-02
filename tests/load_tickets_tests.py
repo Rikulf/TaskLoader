@@ -1,4 +1,5 @@
 import load_tickets
+import loader_types
 import work_ticket
 import unittest
 
@@ -40,6 +41,7 @@ class LoadTicketsTestCase(unittest.TestCase):
         ticket_system.tkt_status = 'status'
         ticket_system.criteria[0] = "status != 'closed' and project = 'PPT'"
         connections['QTASK'] = ticket_system
+        return connections
 
     def _teardown(self):
         print("TEAR DOWN!")

@@ -68,6 +68,9 @@ class TicketSystem:
     def set_tkt_status(self, tkt_status: str) -> object:
         self.tkt_status = tkt_status
 
-    def set_tkt_description(self, tkt_description: str):
+    def set_tkt_description(self, tkt_description: str) -> object:
         self.tkt_description = tkt_description
+
+    def add_criteria(self, criteria: str) -> object:
+        self.criteria[len(self.criteria)] = criteria
 

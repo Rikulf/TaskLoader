@@ -10,6 +10,11 @@ class WorkTicketTestCase(unittest.TestCase):
         self.assertEqual(test_ticket.name, 'JIRA-vob')
         self._teardown()
 
+# Needs attention
+    def test_ticket_system(self):
+        ticket_system.criteria[0] = "key in ('PPTDEV-101', 'PPTDEV-102')"
+
+
     def _setup(self) -> work_ticket:
         print("SETUP!")
         return work_ticket.WorkTicket('jira', 'JIRA-vob')

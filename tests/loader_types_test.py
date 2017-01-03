@@ -16,7 +16,7 @@ class ConnectionLoaderTestCase(unittest.TestCase):
         self.assertEqual(connections['JIRA-vob'].url, 'http://example.com')
         self.assertEqual(connections['JIRA-vob'].tkt_id, 'key')
         self.assertEqual(connections['JIRA-vob'].tkt_requester, 'reporter')
-        self.assertEqual(connections['JIRA-vob'].tkt_assigned, 'assigned')
+        self.assertEqual(connections['JIRA-vob'].tkt_assigned, 'assignee')
         self.assertEqual(connections['JIRA-vob'].tkt_description, 'summary')
         self.assertEqual(connections['JIRA-vob'].tkt_status, 'status')
         self.assertEqual(connections['JIRA-vob'].criteria[0], "key in ('PSM-1', 'PSM-2')")
@@ -36,7 +36,7 @@ class ConnectionLoaderTestCase(unittest.TestCase):
         config_filename = 'test_config.txt'
         f = open(config_filename, 'w')
         f.write("name=JIRA-vob|sys_type=jira|url=http://example.com|tkt_id=key|" +
-                "tkt_requester=reporter|tkt_assigned=assigned|tkt_description=summary|tkt_status=status\n")
+                "tkt_requester=reporter|tkt_assigned=assignee|tkt_description=summary|tkt_status=status\n")
         f.write("name=QTASK|sys_type=qtask|url=http://example.com|tkt_id=ticket_no|" +
                 "tkt_requester=requester|tkt_assigned=assigned|tkt_description=description|tkt_status=status\n")
         f.close()

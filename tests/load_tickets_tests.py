@@ -5,7 +5,7 @@ import unittest
 
 __author__ = 'Darryl Martin'
 
-
+#Needs attention
 class LoadTicketsTestCase(unittest.TestCase):
     def test_load_tickets(self):
         connections = self._setup()
@@ -18,7 +18,16 @@ class LoadTicketsTestCase(unittest.TestCase):
     def _setup(self) -> dict:
         print("SETUP!")
         # Create JIRA-cS connection
-        pass
+        ticket_system = work_ticket.TicketSystem()
+        ticket_system.sys_type = 'jira'
+        ticket_system.url = 'http://rentrak.atlassian.net'
+        ticket_system.tkt_id = 'key'
+        ticket_system.tkt_requester = 'reporter'
+        ticket_system.tkt_assigned = 'assignee'
+        ticket_system.tkt_description = 'summary'
+        ticket_system.tkt_status = 'status'
+        ticket_system.criteria[0] = "key in ('PPTDEV-101', 'PPTDEV-102')"
+        connections['JIRA-cS'] = ticket_system
         # Create JIRA-vob connection
         connections = {}
         ticket_system = work_ticket.TicketSystem()
@@ -26,12 +35,13 @@ class LoadTicketsTestCase(unittest.TestCase):
         ticket_system.url = 'http://example.com'
         ticket_system.tkt_id = 'key'
         ticket_system.tkt_requester = 'reporter'
-        ticket_system.tkt_assigned = 'assigned'
+        ticket_system.tkt_assigned = 'assignee'
         ticket_system.tkt_description = 'summary'
         ticket_system.tkt_status = 'status'
         ticket_system.criteria[0] = "key in ('PSM-1', 'PSM-2')"
         connections['JIRA-vob'] = ticket_system
         # Create QTASK connection
+        ticket_system = work_ticket.TicketSystem()
         ticket_system.sys_type = 'qtask'
         ticket_system.url = 'http://example.com'
         ticket_system.tkt_id = 'ticket_no'

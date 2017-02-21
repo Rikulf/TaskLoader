@@ -8,7 +8,7 @@ class ConnectionLoader(metaclass=abc.ABCMeta):
         pass
 
 
-class ConnectionsInFiles(ConnectionLoader):
+class FileConnectionLoader(ConnectionLoader):
     """Task connecting configuration stored in two flat files"""
     def __init__(self, config_file: str, criteria_file: str) -> ConnectionLoader:
         self.config_file = config_file

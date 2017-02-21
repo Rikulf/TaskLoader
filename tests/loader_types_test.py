@@ -9,7 +9,7 @@ class ConnectionLoaderTestCase(unittest.TestCase):
 
     def test_connections_in_files(self):
         config_filename, criteria_filename = self._setup()
-        loader = loader_types.ConnectionsInFiles(config_filename, criteria_filename)
+        loader = loader_types.FileConnectionLoader(config_filename, criteria_filename)
         connections = loader.load_connections()
 
         self.assertEqual(connections['JIRA-vob'].sys_type, 'jira')

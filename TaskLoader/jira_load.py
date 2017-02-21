@@ -3,17 +3,20 @@ from jira.client import JIRA
 from jira.config import get_jira
 
 
-#Needs attention (all)
-def get_parameters():
+# Example:  python jira_load.py --url https://rentrak.atlassian.net --user dam --password {pw} --get --query 'issue=PPTDEV-145'
+# Needs attention (all)
+def get_parameters(predefined_args=None):
     parser = argparse.ArgumentParser(description='Interface with Jira projects.')
     parser.add_argument('--project', '-P', default=False, dest='project_ID')
-    parser.add_argument('--get', '-G', action='store_true', default=False, dest='get_project')
+    parser.add_argument('--get', '-G', action='store_true', default=False, dest='get_tasks')
     parser.add_argument('--update', '-U', action='store_true', default=False, dest='update_project')
     parser.add_argument('--url', '-s', default=False, dest='jira_server')
     parser.add_argument('--user', '-u', default=False, dest='jira_user')
     parser.add_argument('--password', '-p', default=False, dest='jira_password')
     parser.add_argument('--test', '-t', action='store_true', default=False)
-    _args = parser.parse_args()
+    parser.add_argument('--file', '-f', default=False, dest='arg_file')
+    parser.add_argument('--query', '-q', default=False, dest='jira_query')
+    _args = parser.parse_args(predefined_args)
     vars(_args)
     return _args
 
@@ -42,16 +45,21 @@ def establish_authentication():
     return jira
 
 
-def get_project(jira):
-    print ('In     get_project')
+def get_tasks(jira):
+    print ('In     get_tasks')
     if args.project_ID:
         print ('getting project ' + args.project_ID)
         prj = jira.project(args.project_ID)
         print ('Project Name ' + prj.name)
 #        print (vars (prj))
-        issues_in_project = jira.search_issues("project = '" + args.project_ID + "'")
-        for issue in issues_in_project:
+        issue_list = jira.search_issues("project = '" + args.project_ID + "'")
+        for issue in issue_list:
             print(issue.fields.assignee)
+    elif args.jira_query:
+        print ('getting tasks for query')
+        issue_list = jira.search_issues(args.jira_query)
+        for issue in issue_list:
+            print(issue.fields.reporter)
     else:
         print ('You must provide a project to get!')
         exit(-1)
@@ -60,7 +68,7 @@ def get_project(jira):
 
 def update_project():
     print ('In update_project')
-    print ('In     get_project')
+    print ('In     get_tasks')
     if args.project_ID:
         print ('updating project ' + args.project_ID)
     else:
@@ -75,13 +83,13 @@ def update_project():
 # MAIN
 #
 ###########################################
+if __name__ == '__main__':
+    args = get_parameters("--url https://rentrak.atlassian.net --user dam --get --query 'issue=PPTDEV-145'")
+    jira = establish_authentication()
+    if args.get_tasks:
+        get_tasks(jira)
+    if args.update_project:
+        update_project()
 
-args = get_parameters()
-jira = establish_authentication()
-if args.get_project:
-    get_project(jira)
-if args.update_project:
-    update_project()
-
-exit()
+    exit()
 

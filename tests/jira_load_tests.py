@@ -80,7 +80,8 @@ class LoadJiraLoadCase(unittest.TestCase):
         print("TEAR DOWN!")
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+
 
 
 

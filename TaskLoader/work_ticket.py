@@ -12,7 +12,7 @@ class WorkTicket:
         self.status = ''
         self.description = ''
 
-    def set_sys_type(self, sys_type: str):
+    def set_sys_type(self, sys_type: str) -> void:
         self.sys_type = sys_type
 
     def set_name(self, name: str):
@@ -73,4 +73,7 @@ class TicketSystem:
 
     def add_criteria(self, criteria: str) -> object:
         self.criteria[len(self.criteria)] = criteria
+
+    def load_tickets(self):
+        pass
 

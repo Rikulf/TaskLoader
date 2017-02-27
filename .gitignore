@@ -93,3 +93,5 @@ ENV/
 # Miscellaneous
 *~
 *.swp
+#login and password files
+*_acct.txt

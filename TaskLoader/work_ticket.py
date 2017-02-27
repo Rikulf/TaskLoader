@@ -12,7 +12,7 @@ class WorkTicket:
         self.status = ''
         self.description = ''
 
-    def set_sys_type(self, sys_type: str) -> void:
+    def set_sys_type(self, sys_type: str):
         self.sys_type = sys_type
 
     def set_name(self, name: str):
@@ -40,6 +40,8 @@ class TicketSystem:
         self.sys_type = ''
         self.name = ''
         self.url = ''
+        self.login = ''
+        self.password = ''
         self.tkt_id = ''
         self.tkt_requester = ''
         self.tkt_assigned = ''
@@ -55,6 +57,12 @@ class TicketSystem:
 
     def set_url(self, url: str) -> object:
         self.url = url
+
+    def set_login(self, login: str) -> object:
+        self.login = login
+
+    def set_password(self, password: str) -> object:
+        self.password = password
 
     def set_tkt_id(self, tkt_id: str) -> object:
         self.tkt_id = tkt_id
@@ -72,7 +80,7 @@ class TicketSystem:
         self.tkt_description = tkt_description
 
     def add_criteria(self, criteria: str) -> object:
-        self.criteria[len(self.criteria)] = criteria
+        self.criteria.append(criteria)
 
     def load_tickets(self):
         pass

@@ -27,7 +27,7 @@ def connect_jira(jira_server, jira_user, jira_password) -> JIRA:
     """
     try:
         print("Connecting to JIRA: %s" % jira_server)
-        jira_options = {'server': jira_server}
+        # jira_options = {'server': jira_server}
         jira_connection = get_jira(url=jira_server, username=jira_user, password=jira_password)
         # jira_connection = JIRA(options=jira_options, basic_auth=(jira_user, jira_password))
         return jira_connection
@@ -77,14 +77,14 @@ def update_project():
     return 1
 
 
-
 ###########################################
 #
 # MAIN
 #
 ###########################################
 if __name__ == '__main__':
-    args = get_parameters("--url https://rentrak.atlassian.net --user dam --get --query 'issue=PPTDEV-145'")
+    #args = get_parameters("--url https://rentrak.atlassian.net --user dam --get --query 'issue=PPTDEV-145'")
+    args = get_parameters()
     jira = establish_authentication()
     if args.get_tasks:
         get_tasks(jira)

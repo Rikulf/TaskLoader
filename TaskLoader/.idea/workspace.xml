@@ -4,12 +4,10 @@
     <list default="true" id="6e3d76b8-14bb-4a26-905a-e0eb60fcc071" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jira_load.py" afterPath="$PROJECT_DIR$/jira_load.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/load_tickets.py" afterPath="$PROJECT_DIR$/load_tickets.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loader_types.py" afterPath="$PROJECT_DIR$/loader_types.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/work_ticket.py" afterPath="$PROJECT_DIR$/work_ticket.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tests/jira_load_tests.py" afterPath="$PROJECT_DIR$/../tests/jira_load_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tests/load_tickets_tests.py" afterPath="$PROJECT_DIR$/../tests/load_tickets_tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tests/loader_types_test.py" afterPath="$PROJECT_DIR$/../tests/loader_types_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tests/work_ticket_tests.py" afterPath="$PROJECT_DIR$/../tests/work_ticket_tests.py" />
     </list>
     <ignored path="Task Loader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jira_load.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jira_load.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jira_load.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="221">
+              <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -41,23 +39,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load_tickets_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tests/load_tickets_tests.py">
+      <file leaf-file-name="jira_load_tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../tests/jira_load_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="357">
+              <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#16#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jira_load_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tests/jira_load_tests.py">
+      <file leaf-file-name="loader_types_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../tests/loader_types_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+            <state relative-caret-position="17">
+              <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,21 +64,9 @@
       <file leaf-file-name="work_ticket.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/work_ticket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="74" column="52" lean-forward="false" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
+            <state relative-caret-position="731">
+              <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="argparse.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../Python34/Lib/argparse.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="882" column="16" lean-forward="false" selection-start-line="882" selection-start-column="7" selection-end-line="882" selection-end-column="16" />
-              <folding>
-                <element signature="e#4756#23288#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -95,45 +81,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_loader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="loader_types.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loader_types.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
-              <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loader_types_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tests/loader_types_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="61" />
+            <state relative-caret-position="-170">
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="22" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="work_ticket_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tests/work_ticket_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,9 +110,21 @@
       <find>StoreTrue</find>
       <find>http://rentrak.atlassian.net</find>
       <find>assigned</find>
+      <find>get_project</find>
+      <find>sub-par</find>
+      <find>parse</find>
+      <find>url</find>
+      <find>with</find>
+      <find>_setup_load_passwords</find>
+      <find>password_fp</find>
+      <find>=</find>
     </findStrings>
     <replaceStrings>
       <replace>assignee</replace>
+      <replace>get_tasks</replace>
+      <replace>_setup_load_account</replace>
+      <replace>account_fp</replace>
+      <replace>(</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,17 +142,17 @@
         <option value="$PROJECT_DIR$/file_loader.py" />
         <option value="$PROJECT_DIR$/../tests/file_handling_tests.py" />
         <option value="$PROJECT_DIR$/work_ticket_tests.py" />
-        <option value="$PROJECT_DIR$/loader_types.py" />
         <option value="$PROJECT_DIR$/../../../Jira_Projects.py" />
         <option value="$PROJECT_DIR$/../tests/jira_load_test.py" />
-        <option value="$PROJECT_DIR$/task_loader.py" />
-        <option value="$PROJECT_DIR$/../tests/loader_types_test.py" />
-        <option value="$PROJECT_DIR$/../tests/jira_load_tests.py" />
-        <option value="$PROJECT_DIR$/work_ticket.py" />
         <option value="$PROJECT_DIR$/../tests/work_ticket_tests.py" />
         <option value="$PROJECT_DIR$/../tests/load_tickets_tests.py" />
         <option value="$PROJECT_DIR$/load_tickets.py" />
+        <option value="$PROJECT_DIR$/task_loader.py" />
         <option value="$PROJECT_DIR$/jira_load.py" />
+        <option value="$PROJECT_DIR$/../tests/loader_types_test.py" />
+        <option value="$PROJECT_DIR$/loader_types.py" />
+        <option value="$PROJECT_DIR$/work_ticket.py" />
+        <option value="$PROJECT_DIR$/../tests/jira_load_tests.py" />
       </list>
     </option>
   </component>
@@ -212,7 +178,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,16 +212,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,8 +229,8 @@
       <recent name="G:\Programming\work\Projects\TaskLoader\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in WorkTicketTestCase">
-    <configuration default="false" name="Unittests in loader_types_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in jira_load_tests">
+    <configuration default="false" name="Unittests in jira_load_tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -274,7 +240,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/loader_types_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/jira_load_tests.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -286,7 +252,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests in work_ticket_tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in LoadJiraLoadCase (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -296,72 +262,77 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/work_ticket_tests.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in load_tickets_tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/load_tickets_tests.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Jira_Projects" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../.." />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Task Loader" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Jira_Projects.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in WorkTicketTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tests" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/work_ticket_tests.py" />
-      <option name="CLASS_NAME" value="WorkTicketTestCase" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/jira_load_tests.py" />
+      <option name="CLASS_NAME" value="LoadJiraLoadCase" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in LoadJiraLoadCase (4)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/jira_load_tests.py" />
+      <option name="CLASS_NAME" value="LoadJiraLoadCase" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in LoadJiraLoadCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/jira_load_tests.py" />
+      <option name="CLASS_NAME" value="LoadJiraLoadCase" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest LoadJiraLoadCase.test_load_tickets" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tests" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../tests/jira_load_tests.py" />
+      <option name="CLASS_NAME" value="LoadJiraLoadCase" />
+      <option name="METHOD_NAME" value="test_load_tickets" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -545,19 +516,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.work_ticket" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TaskLoader" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in loader_types_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in work_ticket_tests" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in load_tickets_tests" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Jira_Projects" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in WorkTicketTestCase" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in jira_load_tests" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in LoadJiraLoadCase (2)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in LoadJiraLoadCase (4)" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in LoadJiraLoadCase" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittest LoadJiraLoadCase.test_load_tickets" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in WorkTicketTestCase" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Jira_Projects" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in load_tickets_tests" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in work_ticket_tests" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in loader_types_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in jira_load_tests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest LoadJiraLoadCase.test_load_tickets" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in LoadJiraLoadCase (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in LoadJiraLoadCase" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in LoadJiraLoadCase (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -578,59 +549,59 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_WorkTicketTestCase - 2017.01.02 at 18h 14m 26s.xml">
-      <configuration name="Unittests in WorkTicketTestCase" configurationId="tests" />
+    <history-entry file="Unittest_LoadJiraLoadCase_test_load_tickets - 2017.02.26 at 16h 12m 44s.xml">
+      <configuration name="Unittest LoadJiraLoadCase.test_load_tickets" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_loader_types_test - 2016.10.30 at 18h 59m 07s.xml">
-      <configuration name="Unittests in loader_types_test" configurationId="tests" />
+    <history-entry file="Unittest_LoadJiraLoadCase_test_load_tickets - 2017.02.26 at 16h 13m 09s.xml">
+      <configuration name="Unittest LoadJiraLoadCase.test_load_tickets" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_loader_types_test - 2016.10.30 at 18h 59m 25s.xml">
-      <configuration name="Unittests in loader_types_test" configurationId="tests" />
+    <history-entry file="Unittests_in_LoadJiraLoadCase - 2017.02.26 at 16h 11m 23s.xml">
+      <configuration name="Unittests in LoadJiraLoadCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_loader_types_test - 2016.10.30 at 19h 14m 58s.xml">
-      <configuration name="Unittests in loader_types_test" configurationId="tests" />
+    <history-entry file="Unittests_in_LoadJiraLoadCase_(2) - 2017.02.26 at 16h 12m 08s.xml">
+      <configuration name="Unittests in LoadJiraLoadCase (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_work_ticket_tests - 2016.10.30 at 19h 15m 04s.xml">
-      <configuration name="Unittests in work_ticket_tests" configurationId="tests" />
+    <history-entry file="Unittests_in_LoadJiraLoadCase_(4) - 2017.02.26 at 16h 08m 05s.xml">
+      <configuration name="Unittests in LoadJiraLoadCase (4)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_work_ticket_tests - 2016.10.30 at 19h 15m 27s.xml">
-      <configuration name="Unittests in work_ticket_tests" configurationId="tests" />
+    <history-entry file="Unittests_in_jira_load_tests - 2017.02.26 at 16h 09m 26s.xml">
+      <configuration name="Unittests in jira_load_tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_work_ticket_tests - 2016.10.30 at 19h 16m 07s.xml">
-      <configuration name="Unittests in work_ticket_tests" configurationId="tests" />
+    <history-entry file="Unittests_in_jira_load_tests - 2017.02.26 at 16h 14m 09s.xml">
+      <configuration name="Unittests in jira_load_tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_work_ticket_tests - 2016.10.30 at 19h 18m 59s.xml">
-      <configuration name="Unittests in work_ticket_tests" configurationId="tests" />
+    <history-entry file="Unittests_in_jira_load_tests - 2017.02.26 at 16h 17m 40s.xml">
+      <configuration name="Unittests in jira_load_tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_work_ticket_tests - 2016.10.30 at 19h 19m 16s.xml">
-      <configuration name="Unittests in work_ticket_tests" configurationId="tests" />
+    <history-entry file="Unittests_in_jira_load_tests - 2017.02.26 at 16h 18m 06s.xml">
+      <configuration name="Unittests in jira_load_tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_work_ticket_tests - 2016.10.30 at 19h 19m 46s.xml">
-      <configuration name="Unittests in work_ticket_tests" configurationId="tests" />
+    <history-entry file="Unittests_in_jira_load_tests - 2017.02.26 at 16h 27m 04s.xml">
+      <configuration name="Unittests in jira_load_tests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29704016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39852008" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935064" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -677,48 +648,32 @@
           <url>file://$PROJECT_DIR$/../../../Jira_Projects.py</url>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jira_load.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../tests/jira_load_tests.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../tests/jira_load_tests.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../tests/jira_load_tests.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests/load_tickets_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loader_types.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests/loader_types_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/load_tickets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -739,7 +694,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#19#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -748,7 +705,7 @@
         <state relative-caret-position="561">
           <caret line="33" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -757,7 +714,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,7 +726,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -801,7 +760,7 @@
         <state relative-caret-position="170">
           <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -836,7 +795,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -942,23 +901,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../Python34/Lib/site-packages/jira/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#42#81#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../tests/file_handling_tests.py" />
     <entry file="file://$PROJECT_DIR$/../../../Jira_Projects.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -967,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,79 +923,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../Python34/Lib/argparse.py">
+    <entry file="file://$PROJECT_DIR$/../tests/work_ticket_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="882" column="16" lean-forward="false" selection-start-line="882" selection-start-column="7" selection-end-line="882" selection-end-column="16" />
+        <state relative-caret-position="187">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
-            <element signature="e#4756#23288#0" expanded="false" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests/loader_types_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="61" />
+        <state relative-caret-position="119">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loader_types.py">
+    <entry file="file://$PROJECT_DIR$/../../../../Python34/Lib/site-packages/jira/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests/jira_load_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tests/work_ticket_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/work_ticket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="74" column="52" lean-forward="false" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
+        <state relative-caret-position="-8398">
+          <caret line="1686" column="8" lean-forward="false" selection-start-line="1686" selection-start-column="8" selection-end-line="1686" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../tests/load_tickets_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="68">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,12 +970,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loader_types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Python34/Lib/argparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1748" column="17" lean-forward="false" selection-start-line="1748" selection-start-column="17" selection-end-line="1748" selection-end-column="17" />
+          <folding>
+            <element signature="e#4756#23288#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jira_load.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tests/loader_types_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Python34/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="624" column="0" lean-forward="false" selection-start-line="624" selection-start-column="0" selection-end-line="624" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Python34/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/tcunittest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="261" column="0" lean-forward="false" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work_ticket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tests/jira_load_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>

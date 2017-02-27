@@ -32,6 +32,10 @@ class FileConnectionLoader(ConnectionLoader):
                     ticket_system.set_sys_type(system_ref)
                 elif our_ref == 'url':
                     ticket_system.set_url(system_ref)
+                elif our_ref == 'login':
+                    ticket_system.set_login(system_ref)
+                elif our_ref == 'password':
+                    ticket_system.set_password(system_ref)
                 elif our_ref == 'tkt_id':
                     ticket_system.set_tkt_id(system_ref)
                 elif our_ref == 'tkt_requester':

@@ -1,0 +1,5 @@
+# Comment line starts with '#'
+#pipe delimited
+#Fields can be in any order
+name="my jira"|sys_type=jira|url=www.myjira.com|login=myname|password=mypassword|tkt_id=Issue|tkt_requester=Requester|tkt_assigned=Assigned|tkt_description=Description|tkt_status=Status
+name="your jira"|sys_type=jira|url=www.yourjira.com|login=yourname|password=yourpassword|tkt_id=Issue|tkt_requester=Submitter|tkt_assigned=Assigned|tkt_description=Description|tkt_status=Status

@@ -1,0 +1,6 @@
+# Comment line starts with '#'
+# Repeat a system as needed if you want to separate criteria
+ticket system name (from config)|criteria
+my jira|status='OPEN'
+my jira|create_date > yesterday
+your jira|status not in ('RESOLVED', 'CLOSED')

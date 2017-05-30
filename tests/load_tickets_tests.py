@@ -9,47 +9,49 @@ __author__ = 'Darryl Martin'
 class LoadTicketsTestCase(unittest.TestCase):
     def test_load_tickets(self):
         connections = self._setup()
-        tickets = load_tickets.load_tickets(connections)
-        self.assertEquals(tickets.id, 'PBM-1')
-        self.assertEquals(tickets.status, 'Closed')
-        self.assertEquals(tickets.assign, 'Darryl')
+        for system in list(connections):
+            tickets = load_tickets.load_tickets(connections[system])
+            if system == 'JIRA-vob':
+                self.assertEquals(tickets.id, 'PBM-1')
+                self.assertEquals(tickets.status, 'Closed')
+                self.assertEquals(tickets.assign, 'Darryl')
         self._teardown()
 
     def _setup(self) -> dict:
         print("SETUP!")
+        connections = {}
         # Create JIRA-cS connection
         ticket_system = work_ticket.TicketSystem()
-        ticket_system.sys_type = 'jira'
-        ticket_system.url = 'http://rentrak.atlassian.net'
-        ticket_system.tkt_id = 'key'
-        ticket_system.tkt_requester = 'reporter'
-        ticket_system.tkt_assigned = 'assignee'
-        ticket_system.tkt_description = 'summary'
-        ticket_system.tkt_status = 'status'
-        ticket_system.criteria[0] = "key in ('PPTDEV-101', 'PPTDEV-102')"
+        ticket_system.set_sys_type('jira')
+        ticket_system.set_url('http://sample.atlassian.net')
+        ticket_system.set_tkt_id('key')
+        ticket_system.set_tkt_requester('reporter')
+        ticket_system.set_tkt_assigned('assignee')
+        ticket_system.set_tkt_description('summary')
+        ticket_system.set_tkt_status('status')
+        ticket_system.add_criteria("key in ('PPTDEV-101', 'PPTDEV-102')")
         connections['JIRA-cS'] = ticket_system
         # Create JIRA-vob connection
-        connections = {}
         ticket_system = work_ticket.TicketSystem()
-        ticket_system.sys_type = 'jira'
-        ticket_system.url = 'http://example.com'
-        ticket_system.tkt_id = 'key'
-        ticket_system.tkt_requester = 'reporter'
-        ticket_system.tkt_assigned = 'assignee'
-        ticket_system.tkt_description = 'summary'
-        ticket_system.tkt_status = 'status'
-        ticket_system.criteria[0] = "key in ('PSM-1', 'PSM-2')"
+        ticket_system.set_sys_type('jira')
+        ticket_system.set_url('http://example.com')
+        ticket_system.set_tkt_id('key')
+        ticket_system.set_tkt_requester('reporter')
+        ticket_system.set_tkt_assigned('assignee')
+        ticket_system.set_tkt_description('summary')
+        ticket_system.set_tkt_status('status')
+        ticket_system.add_criteria("key in ('PSM-1', 'PSM-2')")
         connections['JIRA-vob'] = ticket_system
         # Create QTASK connection
         ticket_system = work_ticket.TicketSystem()
-        ticket_system.sys_type = 'qtask'
-        ticket_system.url = 'http://example.com'
-        ticket_system.tkt_id = 'ticket_no'
-        ticket_system.tkt_requester = 'requester'
-        ticket_system.tkt_assigned = 'assigned'
-        ticket_system.tkt_description = 'description'
-        ticket_system.tkt_status = 'status'
-        ticket_system.criteria[0] = "status != 'closed' and project = 'PPT'"
+        ticket_system.set_sys_type('qtask')
+        ticket_system.set_url('http://example.com')
+        ticket_system.set_tkt_id('ticket_no')
+        ticket_system.set_tkt_requester('requester')
+        ticket_system.set_tkt_assigned('assigned')
+        ticket_system.set_tkt_description('description')
+        ticket_system.set_tkt_status('status')
+        ticket_system.add_criteria("status != 'closed' and project = 'PPT'")
         connections['QTASK'] = ticket_system
         return connections
 

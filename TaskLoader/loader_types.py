@@ -20,9 +20,11 @@ class FileConnectionLoader(ConnectionLoader):
         f = open(self.config_file, 'r')
         lines = f.readlines()
         for system_line in lines:
-            ticket_system = work_ticket.TicketSystem()
             system_line = system_line.rstrip('\r\n')
             fields = system_line.split('|')
+            if fields[0][0] == '#':
+                continue
+            ticket_system = work_ticket.TicketSystem()
 
             for field in fields:
                 our_ref, system_ref = field.split('=')
@@ -47,7 +49,8 @@ class FileConnectionLoader(ConnectionLoader):
                 elif our_ref == 'tkt_status':
                     ticket_system.set_tkt_status(system_ref)
 
-            self.system_list[ticket_system.name] = ticket_system
+            if ticket_system.name:
+                self.system_list[ticket_system.name] = ticket_system
         f.close()
 
     def _load_query_criteria(self) -> list:
@@ -57,6 +60,8 @@ class FileConnectionLoader(ConnectionLoader):
         for criteria_line in lines:
             criteria_line = criteria_line.rstrip('\r\n')
             criteria = criteria_line.split('|')
+            if criteria[0][0] == '#':
+                continue
             if criteria[0] not in self.system_list:
                 f.close()
                 raise RuntimeError("I don't know what system '" + criteria[0] + "' is.")
@@ -64,10 +69,14 @@ class FileConnectionLoader(ConnectionLoader):
         f.close()
 
     def load_connections(self) -> dict:
-        # add error checking
+        # TODO: add error checking
         self._load_system_config()
         self._load_query_criteria()
         return self.system_list
+
+    def connection_names(self) -> list:
+        # List individual connection names
+        return list(self.system_list)
 
 
 

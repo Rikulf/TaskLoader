@@ -36,7 +36,7 @@ def connect_jira(jira_server, jira_user, jira_password) -> JIRA:
         return None
     
 
-def establish_authentication():
+def establish_authentication(args):
     print ('In establish_authentication')
 
     # jira=connect_jira("http://rentrak.atlassian.net", "dam", "password")
@@ -45,8 +45,12 @@ def establish_authentication():
     return jira
 
 
-def get_tasks(jira):
-    print ('In     get_tasks')
+def get_tasks(jira, args):
+    """
+    :type jira: JIRA
+    :type args: dict
+    """
+    print ('In jira_load.get_tasks')
     if args.project_ID:
         print ('getting project ' + args.project_ID)
         prj = jira.project(args.project_ID)
@@ -66,7 +70,7 @@ def get_tasks(jira):
     return 1
 
 
-def update_project():
+def update_project(args):
     print ('In update_project')
     print ('In     get_tasks')
     if args.project_ID:
@@ -83,13 +87,18 @@ def update_project():
 #
 ###########################################
 if __name__ == '__main__':
-    #args = get_parameters("--url https://rentrak.atlassian.net --user dam --get --query 'issue=PPTDEV-145'")
-    args = get_parameters()
-    jira = establish_authentication()
-    if args.get_tasks:
-        get_tasks(jira)
-    if args.update_project:
-        update_project()
+    #main_args = get_parameters("--url https://rentrak.atlassian.net --user dam --get --query 'issue=PPTDEV-145'")
+    main_args = get_parameters()
+    main_jira = establish_authentication(main_args)
+    if main_jira is None:
+        print ('Error authenticating. Aborting.')
+        exit(-1)
+
+
+    if main_args.get_tasks:
+        get_tasks(main_jira, main_args)
+    if main_args.update_project:
+        update_project(main_args)
 
     exit()
 

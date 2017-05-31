@@ -20,6 +20,7 @@ class LoadTicketsTestCase(unittest.TestCase):
     def _setup(self) -> dict:
         print("SETUP!")
         connections = {}
+
         # Create JIRA-cS connection
         ticket_system = work_ticket.TicketSystem()
         ticket_system.set_sys_type('jira')

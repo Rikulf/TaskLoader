@@ -9,6 +9,8 @@ __author__ = 'Darryl Martin'
 Input: A dictionary defined in loader_types of system type specifics
 Output: A ticket dictionary using references and criteria defined in the connection dictionary
 '''
+
+
 def load_tickets(connection) -> list:
     """
     :type connection: dict
@@ -21,13 +23,14 @@ def load_tickets(connection) -> list:
     func = switcher.get(connection.sys_type, lambda: {})
     return func(connection)
 
-# TODO
+# TODO: NEXT
 def _load_jira_tickets(connection) -> list:
     """
     :type connection: dict
     """
-    jira_connection = jira_load.connect_jira(connection.url, connection.login, connection.password)
-    jira_load.get_tasks(jira_connection)
+    jira_loader = jira_load.JiraLoader()
+    jira_connection = jira_loader.connect_jira(connection.url, connection.login, connection.password)
+    jira_loader.get_tasks(jira_connection, args)
 
 # TODO
 def _load_qtask_tickets(connection) -> list:

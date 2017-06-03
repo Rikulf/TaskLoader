@@ -41,8 +41,7 @@ class LoadJiraLoadCase(unittest.TestCase):
 '''
 
     ##
-    #  TODO: NEXT...
-    ##
+    #  TODO
 
     #args = get_parameters("--url https://rentrak.atlassian.net --user dam --get --query 'issue=PPTDEV-145'")
     args = get_parameters()

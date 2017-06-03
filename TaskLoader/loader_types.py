@@ -10,7 +10,7 @@ class ConnectionLoader(metaclass=abc.ABCMeta):
 
 class FileConnectionLoader(ConnectionLoader):
     """Task connecting configuration stored in two flat files"""
-    def __init__(self, config_file: str, criteria_file: str) -> ConnectionLoader:
+    def __init__(self, config_file: str, criteria_file: str):
         self.config_file = config_file
         self.criteria_file = criteria_file
         self.system_list = {}
@@ -53,7 +53,7 @@ class FileConnectionLoader(ConnectionLoader):
                 self.system_list[ticket_system.name] = ticket_system
         f.close()
 
-    def _load_query_criteria(self) -> list:
+    def _load_query_criteria(self):
         # open config file
         f = open(self.criteria_file, 'r')
         lines = f.readlines()

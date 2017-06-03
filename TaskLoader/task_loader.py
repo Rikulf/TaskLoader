@@ -1,3 +1,6 @@
+import logging
+import sys
+import os
 import load_tickets
 import loader_types
 
@@ -9,6 +12,15 @@ __author__ = 'Darryl Martin'
 #
 ###########################################
 if __name__ == '__main__':
+    if os.environ.get("DEBUGMODE"):
+        logLevel = logging.DEBUG
+    else:
+        logLevel = logging.WARNING
+    logging.basicConfig(
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', stream=sys.stderr, level=logLevel
+        )
+    logit = logging.getLogger(__name__)
+
     config_file = 'C:\Temp\config.txt'
     criteria_file = 'C:\Temp\criteria.txt'
 

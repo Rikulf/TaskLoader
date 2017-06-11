@@ -33,6 +33,7 @@ class JiraLoader:
     def connect_jira(self, jira_server, jira_user, jira_password) -> JIRA:
         """
         Connect to JIRA. Return None on error
+        Doesn't reference "args"
         """
         self.logit.debug("Connecting to JIRA: %s", jira_server)
         try:
@@ -51,46 +52,45 @@ class JiraLoader:
 
         return jira
 
-    def get_tasks(self, jira, args: dict):
+    def get_tasks(self, jira, project_ID, jira_query) -> list:
         """
         :type jira: JIRA
-        :type args: dict
+        :type project_ID: str
+        :type jira_query: str
         """
         self.logit.debug('In jira_load.get_tasks')
-        self.logit.debug(args)
-        if args.project_ID:
+        if project_ID:
+            self.logit.debug("Project: " + project_ID)
+        if jira_query:
+            self.logit.debug("Query: " + jira_query)
+        if project_ID:
             try:
-                self.logit.debug('getting project ' + args.project_ID)
-                prj = jira.project(args.project_ID)
+                self.logit.debug('getting project ' + project_ID)
+                prj = jira.project(project_ID)
                 self.logit.debug('Project Name ' + prj.name)
-                issue_list = jira.search_issues("project = '" + args.project_ID + "'")
-                for issue in issue_list:
-                    print(issue.fields.assignee)
+                issue_list = jira.search_issues("project = '" + project_ID + "'")
             except Exception as e:
-                print("Error returning Project Information: %s" % e)
-                self.logit.error("Error returning Project Information: %s", e)
+                self.logit.error("Unable to find information for Project %s. Error: %s", project_ID, e)
+                print("Unable to find information for Project %s" % project_ID)
                 return None
-
-        elif args.jira_query:
+        elif jira_query:
             try:
-                self.logit.debug('getting tasks for query: ' + args.jira_query)
-                issue_list = jira.search_issues(args.jira_query)
-                for issue in issue_list:
-                    print(issue.fields.reporter)
+                self.logit.debug('getting tasks for query: ' + jira_query)
+                issue_list = jira.search_issues(jira_query)
             except Exception as e:
-                print("Error parsing Jira criteria: %s" % e)
-                self.logit.error("Error parsing Jira criteria: %s", e)
+                self.logit.error("Error parsing Jira criteria: %s. Error: %s", jira_query, e)
+                print ("No tickets found for JIRA query: %s" % jira_query)
                 return None
         else:
-            print('You must provide a project to get!')
+            print("I don't know what tickets to get!")
             exit(-1)
-        return 1
+        return issue_list
 
-    def update_project(self, args):
+    def update_project(self, project_ID):
         self.logit.debug('In update_project')
         self.logit.debug('In     get_tasks')
-        if args.project_ID:
-            print('updating project ' + args.project_ID)
+        if project_ID:
+            print('updating project ' + project_ID)
         else:
             print('You must provide a project to update!')
             exit(-1)
@@ -120,8 +120,11 @@ if __name__ == '__main__':
         exit(-1)
 
     if main_args.get_tasks:
-        jira_loader.get_tasks(main_jira, main_args)
+        issue_list = jira_loader.get_tasks(main_jira, main_args.project_ID, main_args.jira_query)
+        for issue in issue_list:
+            print("Reporter: " + issue.fields.reporter + " Assignee: " + issue.fields.assignee)
     if main_args.update_project:
-        jira_loader.update_project(main_args)
+        jira_loader.update_project(main_args.project_ID)
 
     exit()
+

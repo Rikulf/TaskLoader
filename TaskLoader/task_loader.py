@@ -3,6 +3,7 @@ import sys
 import os
 import load_tickets
 import loader_types
+import display_tickets
 
 __author__ = 'Darryl Martin'
 
@@ -26,7 +27,12 @@ if __name__ == '__main__':
 
     loader = loader_types.FileConnectionLoader(config_file, criteria_file)
     connections = loader.load_connections()
+    tickets = []
     for connection in connections:
-        tickets = load_tickets.load_tickets(connections[connection])
+        tickets += load_tickets.load_tickets(connections[connection])
 
-#    display_tickets()
+    display = display_tickets.DisplayTickets()
+    if tickets is None:
+        print ("No tickets found that match the criteria.")
+    else:
+        display.dump_all(tickets)

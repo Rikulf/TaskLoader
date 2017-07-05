@@ -15,7 +15,7 @@ def get_parameters(predefined_args=None):
     parser.add_argument('--url', '-s', default=False, dest='jira_server')
     parser.add_argument('--user', '-u', default=False, dest='jira_user')
     parser.add_argument('--password', '-p', default=False, dest='jira_password')
-    parser.add_argument('--test', '-t', action='store_true', default=False)
+    parser.add_argument('--test', '-t', action='store_true', default=False, dest='test_only')
     parser.add_argument('--file', '-f', default=False, dest='arg_file')
     parser.add_argument('--query', '-q', default=False, dest='jira_query')
     _args = parser.parse_args(predefined_args)
@@ -78,7 +78,7 @@ class JiraLoader:
                 self.logit.debug('getting tasks for query: ' + jira_query)
                 issue_list = jira.search_issues(jira_query)
             except Exception as e:
-                self.logit.error("Error parsing Jira criteria: %s. Error: %s", jira_query, e)
+                self.logit.warning("Error parsing Jira criteria: %s. Error: %s", jira_query, e)
                 print ("No tickets found for JIRA query: %s" % jira_query)
                 return None
         else:
@@ -122,7 +122,7 @@ if __name__ == '__main__':
     if main_args.get_tasks:
         issue_list = jira_loader.get_tasks(main_jira, main_args.project_ID, main_args.jira_query)
         for issue in issue_list:
-            print("Reporter: " + issue.fields.reporter + " Assignee: " + issue.fields.assignee)
+            print("Reporter: " + repr(issue.fields.reporter) + " Assignee: " + repr(issue.fields.assignee))
     if main_args.update_project:
         jira_loader.update_project(main_args.project_ID)
 

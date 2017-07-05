@@ -21,6 +21,7 @@ def load_tickets(connection) -> list:
     func = switcher.get(connection.sys_type, lambda: {})
     return func(connection)
 
+
 # TODO : NEXT : Return WorkTickets
 def _load_jira_tickets(connection) -> list:
     """

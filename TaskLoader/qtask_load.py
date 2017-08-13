@@ -1,30 +1,29 @@
 import logging
 import sys
 import argparse
-from jira.client import JIRA
-from jira.config import get_jira
 import work_ticket
 
 # Example:
-# python jira_load.py --url https://rentrak.atlassian.net --user dam --password {pw} --get --query 'issue=PPTDEV-145'
+'''
 def get_parameters(predefined_args=None):
-    parser = argparse.ArgumentParser(description='Interface with Jira projects.')
+    parser = argparse.ArgumentParser(description='Interface with qtask projects.')
     parser.add_argument('--project', '-P', default=False, dest='project_ID')
     parser.add_argument('--get', '-G', action='store_true', default=False, dest='get_tasks')
     parser.add_argument('--update', '-U', action='store_true', default=False, dest='update_project')
-    parser.add_argument('--url', '-s', default=False, dest='jira_server')
-    parser.add_argument('--user', '-u', default=False, dest='jira_user')
-    parser.add_argument('--password', '-p', default=False, dest='jira_password')
+    parser.add_argument('--url', '-s', default=False, dest='qtask_server')
+    parser.add_argument('--user', '-u', default=False, dest='qtask_user')
+    parser.add_argument('--password', '-p', default=False, dest='qtask_password')
     parser.add_argument('--test', '-t', action='store_true', default=False, dest='test_only')
     parser.add_argument('--file', '-f', default=False, dest='arg_file')
-    parser.add_argument('--query', '-q', default=False, dest='jira_query')
+    parser.add_argument('--query', '-q', default=False, dest='qtask_query')
     _args = parser.parse_args(predefined_args)
     vars(_args)
     return _args
+'''
 
 
-class JiraLoader:
-    """Connect to a JIRA system. Return ticket information."""
+class QtaskLoader:
+    """Connect to a Qtask system. Return ticket information."""
     def __init__(self, sys_type, sys_name):
         if 'logit' not in locals():
             self.logit = logging.getLogger(__name__)
@@ -32,58 +31,58 @@ class JiraLoader:
         self.sys_name = sys_name
         return
 
-    def connect_jira(self, jira_server, jira_user, jira_password) -> JIRA:
+    def connect_qtask(self, qtask_server, qtask_user, qtask_password) -> qtask:
         """
-        Connect to JIRA. Return None on error
+        Connect to qtask. Return None on error
         Doesn't reference "args"
         """
-        self.logit.debug("Connecting to JIRA: %s", jira_server)
+        self.logit.debug("Connecting to qtask: %s", qtask_server)
         try:
-            # jira_options = {'server': jira_server}
-            jira_connection = get_jira(url=jira_server, username=jira_user, password=jira_password)
-            # jira_connection = JIRA(options=jira_options, basic_auth=(jira_user, jira_password))
-            return jira_connection
+            # qtask_options = {'server': qtask_server}
+            qtask_connection = get_qtask(url=qtask_server, username=qtask_user, password=qtask_password)
+            # qtask_connection = qtask(options=qtask_options, basic_auth=(qtask_user, qtask_password))
+            return qtask_connection
         except Exception as e:
-            print("Failed to connect to JIRA: %s" % e)
+            print("Failed to connect to qtask: %s" % e)
             return None
 
     def establish_authentication(self, args):
         self.logit.debug('In establish_authentication')
 
-        jira = self.connect_jira(args.jira_server, args.jira_user, args.jira_password)
+        qtask = self.connect_qtask(args.qtask_server, args.qtask_user, args.qtask_password)
 
-        return jira
+        return qtask
 
-    def get_tasks(self, jira, project_ID, jira_query) -> list:
+    def get_tasks(self, qtask, project_ID, qtask_query) -> list:
         """
-        :type jira: JIRA
+        :type qtask: qtask
         :type project_ID: str
-        :type jira_query: str
+        :type qtask_query: str
         """
         global issue_list
-        self.logit.debug('In jira_load.get_tasks')
+        self.logit.debug('In qtask_load.get_tasks')
         if project_ID:
             try:
                 self.logit.debug('getting project ' + project_ID)
-                prj = jira.project(project_ID)
+                prj = qtask.project(project_ID)
                 self.logit.debug('Project Name ' + prj.name)
-                issue_list = jira.search_issues("project = '" + project_ID + "'")
+                issue_list = qtask.search_issues("project = '" + project_ID + "'")
             except Exception as e:
                 self.logit.error("Unable to find information for Project %s. Error: %s", project_ID, e)
                 print("Unable to find information for Project %s" % project_ID)
                 return None
-        elif jira_query:
+        elif qtask_query:
             try:
-                self.logit.debug('getting tasks for query: ' + jira_query)
-                issue_list = jira.search_issues(jira_query)
+                self.logit.debug('getting tasks for query: ' + qtask_query)
+                issue_list = qtask.search_issues(qtask_query)
             except Exception as e:
-                self.logit.warning("Error parsing Jira criteria: %s. Error: %s", jira_query, e)
-                print ("No tickets found for JIRA query: %s" % jira_query)
+                self.logit.warning("Error parsing qtask criteria: %s. Error: %s", qtask_query, e)
+                print ("No tickets found for qtask query: %s" % qtask_query)
                 return None
         else:
             print("I don't know what tickets to get!")
             exit(-1)
-        return self._Jira_to_work_tickets(issue_list)
+        return self._qtask_to_work_tickets(issue_list)
 
     def update_project(self, project_ID):
         self.logit.debug('In update_project')
@@ -95,8 +94,8 @@ class JiraLoader:
             exit(-1)
         return 1
 
-    def _Jira_to_work_tickets(self, issue_list):
-        self.logit.debug('Converting Jira issues to work tickets.')
+    def _qtask_to_work_tickets(self, issue_list):
+        self.logit.debug('Converting qtask issues to work tickets.')
         if issue_list is None:
             return None
         ticket_list = []
@@ -120,25 +119,25 @@ if __name__ == '__main__':
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', stream=sys.stderr, level=logging.DEBUG)
     logit = logging.getLogger(__name__)
 
-    jira_loader = JiraLoader()
+    qtask_loader = qtaskLoader()
     # main_args = get_parameters(
     #   predefined_args=
     #   "--url https://rentrak.atlassian.net --user dam --get --query issue=PPTDEV-145 --password {}".split( ))
     # command line =
-    #   python jira_load.py
+    #   python qtask_load.py
     #       --url https://rentrak.atlassian.net --user dam@rentrakmail.com --get --query key=PPTDEV-145 --password {pw}
     main_args = get_parameters()
-    main_jira = jira_loader.establish_authentication(main_args)
-    if main_jira is None:
+    main_qtask = qtask_loader.establish_authentication(main_args)
+    if main_qtask is None:
         print('Error authenticating. Aborting.')
         exit(-1)
 
     if main_args.get_tasks:
-        issue_list = jira_loader.get_tasks(main_jira, main_args.project_ID, main_args.jira_query)
+        issue_list = qtask_loader.get_tasks(main_qtask, main_args.project_ID, main_args.qtask_query)
         for issue in issue_list:
             print("Reporter: " + repr(issue.fields.reporter) + " Assignee: " + repr(issue.fields.assignee))
     if main_args.update_project:
-        jira_loader.update_project(main_args.project_ID)
+        qtask_loader.update_project(main_args.project_ID)
 
     exit()
 

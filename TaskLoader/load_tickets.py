@@ -22,12 +22,11 @@ def load_tickets(connection) -> list:
     return func(connection)
 
 
-# TODO : NEXT : Return WorkTickets
 def _load_jira_tickets(connection) -> list:
     """
     :type connection: dict
     """
-    jira_loader = jira_load.JiraLoader()
+    jira_loader = jira_load.JiraLoader(connection.sys_type, connection.name)
     jira_connection = jira_loader.connect_jira(connection.url, connection.login, connection.password)
     if jira_connection is None:
         print("ERROR: Couldn't authenticate to JIRA: %s :: %s" + connection.url, connection.login)
@@ -41,7 +40,7 @@ def _load_jira_tickets(connection) -> list:
 
     return ticket_list
 
-# TODO
+# TODO : NEXT
 def _load_qtask_tickets(connection) -> list:
     """
     :type connection: dict
